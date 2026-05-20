@@ -48,10 +48,14 @@ Every UI change must work on small screens **before** desktop. Test responsive l
 
 ## Git workflow
 
+**After completing any task — no exceptions — commit and push to GitHub.** This is mandatory, not optional. Every session must leave the repo in a pushed state so work is never lost.
+
 - All commits go directly to `main` — no feature branches.
-- Use the `/commit-push` skill after completing a task. It writes a conventional commit and pushes.
-- The Stop hook auto-saves with `chore: auto-save` if you forget — that's a fallback, not the primary commit style.
+- Commit at the end of every logical unit of work: a new feature, a bug fix, a config change, a refactor. Do not batch multiple unrelated changes into one commit.
+- Use the `/commit-push` skill to write a clean conventional commit and push. If the skill is unavailable, run `git add`, `git commit`, and `git push origin main` directly.
+- The Stop hook auto-saves with `chore: auto-save` if a session ends without committing — that's a safety net, not a substitute for a real commit.
 - Commit message format: `type: short description` (e.g. `feat: add search filter`, `fix: booking modal validation`).
+- Never leave the session without verifying `git status` is clean and `git log --oneline -1` shows the latest work on GitHub.
 
 ## No tests yet
 
