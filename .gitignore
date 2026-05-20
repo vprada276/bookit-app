@@ -41,3 +41,6 @@ vite.config.ts.timestamp-*
 # Claude Code internal memory
 MEMORY.md
 memory/
+
+# Claude Code local settings (machine-specific hooks)
+.claude/settings.local.json
